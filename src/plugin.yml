@@ -1,0 +1,8 @@
+name: TimingsPatcher
+main: net.papucraft.plugins.TimingsPatch.Main
+version: 1.1
+author: [PapuCraft, mc.papucraft.net]
+description: This plugin allows you to fix the /timings command
+website: www.papucraft.net
+commands:
+    timingspatcher: {}
