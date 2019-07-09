@@ -23,7 +23,8 @@ import java.net.URL;
 import java.util.logging.Level;
 
 public class Main extends JavaPlugin implements Listener {
-    
+
+    @Override
     public void onEnable() {
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "§m----------§7 [ §bTimingsPatch 1.1 §7] §m----------");
@@ -92,7 +93,8 @@ public class Main extends JavaPlugin implements Listener {
             this.sender = sender;
             this.bout = bout;
         }
-        
+
+        @Override
         public synchronized void start() {
             if ((sender instanceof org.bukkit.command.RemoteConsoleCommandSender)) {
                 run();
@@ -100,7 +102,8 @@ public class Main extends JavaPlugin implements Listener {
                 super.start();
             }
         }
-        
+
+        @Override
         public void run() {
             try {
                 HttpURLConnection con = (HttpURLConnection) new URL("https://timings.spigotmc.org/paste").openConnection();
